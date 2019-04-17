@@ -1,10 +1,67 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="application-name" content="NYT Article Search">
+    <meta name="description" content="Search for Articles with the New York Times API.">
+    <meta name="author" content="Nathaniel Spry">
+    <meta name="keywords" content="NYT, Article, Bootstrap, API, HTML, CSS, JavaScript, JQuery">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
+      <section class="jumbotron">
+        <h1 class="display-3">New York Times Search</h1>
+      </section>
+      <section class="card">
+        <div class="card-header">
+          Search Parameters
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
 
+              <label for="search">Search Term:</label>
+              <input type="text" class="form-control" id="search">
+
+              <label for="numRec">Number of Records to Retrieve:</label>
+              <br>
+              <select name="numRecSelect" id="numRec">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <br>
+
+              <label for="startYear">Start Year (Optional):</label>
+              <input type="text" class="form-control" id="startYear">
+
+              <label for="endYear">End Year (Optional):</label>
+              <input type="text" class="form-control" id="endYear">
+
+              <button class="" type="submit" id="searchBtn">Search</button>
+              <button class="" type="submit" id="clearBtn">Clear Results</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">Top Articles</div>
+        <div class="card-body"></div>
+      </section>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
