@@ -73,3 +73,8 @@ $("#searchBtn").on("click", function(event) {
   }
   runQuery(numResults, queryURL)
 })
+
+$("#clearBtn").on("click", function() {
+  articleCounter = 0
+  $("#well-section").empty()
+})
