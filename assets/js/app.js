@@ -53,4 +53,23 @@ function runQuery(numArticles, queryURL) {
     }
   })
 }
-runQuery(1, queryURLBase + "dogs")
+
+$("#searchBtn").on("click", function(event) {
+  event.preventDefault()
+  articleCounter = 0
+  $("#well-section").empty()
+  searchTerm = $("#search").val().trim()
+  var queryURL = queryURLBase + searchTerm
+  numResults = $("#numRec").val()
+  startYear = $("#startYear").val().trim()
+  endYear = $("#endYear").val().trim()
+
+  if (parseInt(startYear)) {
+    queryURL = queryURL + "&begin_date=" + startYear + "0101"
+  }
+
+  if (parseInt(endYear)) {
+    queryURL = queryURL + "&end_date=" + endYear + "0101"
+  }
+  runQuery(numResults, queryURL)
+})
